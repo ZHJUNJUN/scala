@@ -1,7 +1,7 @@
 package com.zjj.scalaschool
 
 
-//
+// 模式匹配
 object HelloWorld {
   // 模式匹配
   // 匹配所有
