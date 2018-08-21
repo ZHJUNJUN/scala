@@ -1,4 +1,4 @@
-import com.zjj.scalaschool.{Point1, PointWithPrivate, User}
+import com.zjj.scalaschool.{Point1, PointWithPrivate, PointWithValCons, User}
 
 /**
   * <p>User: Zhang Junjun
@@ -27,5 +27,15 @@ object Scala_Classes_test{
     val point4 = new PointWithPrivate
     point4.x = 99
     point4.y = 101 // prints the warning
+
+    val point5 = new PointWithValCons(1,2)
+    // Primary constructor parameters with val and var are public.
+    // However, because vals are immutable, you can’t write the following.
+    // point5.x = 4;
+
+    //Parameters without val or var are private values, visible only within the class.
+    class PointWithOutVal(x: Int, y: Int)
+    val point = new PointWithOutVal(1, 2)
+    point.x  // <-- does not compile
   }
 }
