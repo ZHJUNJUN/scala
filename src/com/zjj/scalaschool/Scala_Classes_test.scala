@@ -36,6 +36,6 @@ object Scala_Classes_test{
     //Parameters without val or var are private values, visible only within the class.
     class PointWithOutVal(x: Int, y: Int)
     val point = new PointWithOutVal(1, 2)
-    point.x  // <-- does not compile
+    // point.x  // <-- does not compile
   }
 }
